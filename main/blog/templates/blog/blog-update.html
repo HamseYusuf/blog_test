@@ -1,0 +1,18 @@
+{% extends 'blog/main.html' %}
+
+
+
+{% block content %}
+
+
+<div class ="content-section">
+    <h1> Update Post {{blog.title }}</h1>
+    <form class = "form-group" method = "POST">
+        {% csrf_token %}
+        {{form.as_p }}
+        <button class=" btn btn-outline-primary" type = 'submit '> Update</button >
+           
+    </form>
+</div>
+
+{% endblock content %}
